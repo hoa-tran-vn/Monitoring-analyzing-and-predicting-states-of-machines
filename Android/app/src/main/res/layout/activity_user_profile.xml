@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile"
+    android:background="@color/BackGround_four">
+
+    <RelativeLayout
+        android:id="@+id/Relate_layout_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:background="@color/CardBackGround_four_opt_one"
+        >
+
+        <ImageView
+            android:onClick="Back"
+            android:background="@drawable/back_button_shape"
+            android:id="@+id/Days_backBtn"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/back_icon" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/Relate_layout_one"
+        android:id="@+id/RelativeLayout_one"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/CardBackGround_four_opt_one"
+        >
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/users_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hồ sơ"
+            android:textColor="@color/ButtonColor_four"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/barlow_bold"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_marginBottom="70dp"
+        android:layout_below="@+id/RelativeLayout_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/MainBackRound_three"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+            android:fontFamily="@font/barlow_medium"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Họ/tên:"
+            android:textColor="@color/ButtonColor_four"/>
+
+            <TextView
+                android:id="@+id/UserProfile_fullName_TxtView"
+                android:fontFamily="@font/barlow_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Daniel"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/TextColor_four_opt_two"
+                android:textSize="20sp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"/>
+
+            <TextView
+                android:fontFamily="@font/barlow_medium"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mật khẩu:"
+                android:textColor="@color/ButtonColor_four"/>
+
+            <TextView
+                android:id="@+id/UserProfile_passWord_TxtView"
+                android:fontFamily="@font/barlow_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="192244f"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/TextColor_four_opt_two"
+                android:textSize="20sp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"/>
+
+            <TextView
+                android:fontFamily="@font/barlow_medium"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mã nhân viên:"
+                android:textColor="@color/ButtonColor_four"/>
+
+            <TextView
+                android:id="@+id/UserProfile_ID_TxtView"
+                android:fontFamily="@font/barlow_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="K1191"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/TextColor_four_opt_two"
+                android:textSize="20sp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"/>
+
+            <TextView
+                android:fontFamily="@font/barlow_medium"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Số điện thoại:"
+                android:textColor="@color/ButtonColor_four"/>
+
+            <TextView
+                android:fontFamily="@font/barlow_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Null"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/TextColor_four_opt_two"
+                android:textSize="20sp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"/>
+
+            <TextView
+                android:fontFamily="@font/barlow_medium"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Giới tính:"
+                android:textColor="@color/ButtonColor_four"/>
+
+            <TextView
+                android:fontFamily="@font/barlow_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Null"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/TextColor_four_opt_two"
+                android:textSize="20sp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"/>
+
+            <TextView
+                android:fontFamily="@font/barlow_medium"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:textColor="@color/ButtonColor_four"/>
+
+            <TextView
+                android:id="@+id/UserProfile_Email_TxtView"
+                android:fontFamily="@font/barlow_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Support@gmail.com"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/TextColor_four_opt_two"
+                android:textSize="20sp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/Profile_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_menu"
+        app:itemIconTint="@color/ButtonColor_four"
+        app:itemTextColor="@color/ButtonColor_four"
+        android:background="@color/CardBackGround_four_opt_one"
+        />
+
+</RelativeLayout>

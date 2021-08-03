@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Months"
+    android:background="@color/MainBackRound_three"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/Relate_layout_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:background="@color/CardBackGround_four_opt_one"
+            >
+
+            <ImageView
+                android:background="@drawable/back_button_shape"
+                android:onClick="Back"
+                android:id="@+id/Months_backBtn"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/back_icon" />
+
+            <ImageView
+                android:layout_marginEnd="25dp"
+                android:id="@+id/Months_notificationBell"
+                android:transitionName="Notification_transition"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/nofication_icon" />
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/Months_NotificationNumber"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/Months_notificationBell"
+                android:background="@drawable/notification_shape"
+                android:fontFamily="@font/barlow_bold"
+                android:text="20"
+                android:textAlignment="center"
+                android:textColor="@color/TextColor_four_opt_two"
+                android:textSize="10sp"
+                android:transitionName="NotificationNumber_transition" />
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_marginBottom="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/Months_Card_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/card_shape"
+                    >
+                    <TextView
+                        android:id="@+id/Months_Power"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/barlow_medium"
+                        android:text="162.000 KW"
+                        android:textColor="@color/TextColor_four_opt_two"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/Months_PowerDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/barlow_light"
+                        android:text="Tổng công suất nhà máy trong tháng"
+                        android:textColor="@color/TextColor_four_opt_two" />
+
+                    <LinearLayout
+                        android:padding="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:orientation="vertical">
+
+                        <com.github.mikephil.charting.charts.HorizontalBarChart
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/Months_BarChart"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Months_Card_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/card_shape"
+                    >
+
+                    <LinearLayout
+                        android:padding="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:orientation="vertical">
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/Months_PieChart"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Months_Productivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="96%"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/barlow_medium"
+                        android:textColor="@color/TextColor_four_opt_two"/>
+
+                    <TextView
+                        android:id="@+id/Months_ProductivityDesc"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/TextColor_four_opt_two"
+                        android:text="Hiệu suất nhà máy trong tháng"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/Months_Bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_menu"
+        app:itemIconTint="@color/ButtonColor_four"
+        app:itemTextColor="@color/ButtonColor_four"
+        android:background="@color/CardBackGround_four_opt_one"
+        />
+
+</RelativeLayout>

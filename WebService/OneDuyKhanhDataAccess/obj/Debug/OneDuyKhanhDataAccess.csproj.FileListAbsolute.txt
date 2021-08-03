@@ -1,0 +1,12 @@
+C:\Users\Dell PC\source\repos\MachineMonitorWebService\OneDuyKhanhDataAccess\bin\Debug\OneDuyKhanhDataAccess.dll.config
+C:\Users\Dell PC\source\repos\MachineMonitorWebService\OneDuyKhanhDataAccess\bin\Debug\OneDuyKhanhDataAccess.dll
+C:\Users\Dell PC\source\repos\MachineMonitorWebService\OneDuyKhanhDataAccess\bin\Debug\OneDuyKhanhDataAccess.pdb
+C:\Users\Dell PC\source\repos\MachineMonitorWebService\OneDuyKhanhDataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Dell PC\source\repos\MachineMonitorWebService\OneDuyKhanhDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dell PC\source\repos\MachineMonitorWebService\OneDuyKhanhDataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Dell PC\source\repos\MachineMonitorWebService\OneDuyKhanhDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dell PC\source\repos\MachineMonitorWebService\OneDuyKhanhDataAccess\obj\Debug\OneDuyKhanhDataAccess.csprojAssemblyReference.cache
+C:\Users\Dell PC\source\repos\MachineMonitorWebService\OneDuyKhanhDataAccess\obj\Debug\OneDuyKhanhDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Dell PC\source\repos\MachineMonitorWebService\OneDuyKhanhDataAccess\obj\Debug\OneDuyKhanhDataAccess.csproj.CopyComplete
+C:\Users\Dell PC\source\repos\MachineMonitorWebService\OneDuyKhanhDataAccess\obj\Debug\OneDuyKhanhDataAccess.dll
+C:\Users\Dell PC\source\repos\MachineMonitorWebService\OneDuyKhanhDataAccess\obj\Debug\OneDuyKhanhDataAccess.pdb

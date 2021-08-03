@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/CardBackGround_four_opt_one">
+
+    <RelativeLayout
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/exit_dialog_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/close_icon"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:text="Bạn chắc chắn muốn thoát?"
+            android:textColor="@color/ButtonColor_four"
+            android:fontFamily="@font/barlow_bold"/>
+
+        <TextView
+            android:fontFamily="@font/barlow_light"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/TextColor_four_opt_two"
+            android:text="Có thể còn một số thông tin cần kiểm tra trước khi rời hệ thống."
+            />
+
+        <Button
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/exit_dialog_Exit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Thoát"
+            android:fontFamily="@font/barlow_medium"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:background="@drawable/button_shape"/>
+
+    </LinearLayout>
+
+</LinearLayout>

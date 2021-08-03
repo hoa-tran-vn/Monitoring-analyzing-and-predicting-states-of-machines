@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shadow_card_signin"/>
+    <item>
+        <shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="12dp"/>
+            <gradient android:angle="45"
+                android:startColor="@color/CardBackGround_four_opt_two"
+                android:endColor="@color/CardBackGround_four_opt_one"/>
+        </shape>
+    </item>
+
+</layer-list>
+

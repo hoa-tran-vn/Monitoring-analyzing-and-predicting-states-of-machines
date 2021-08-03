@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="Trang chính"
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"/>
+        <item android:title="Ngày"
+            android:id="@+id/nav_days"
+            android:icon="@drawable/ic_days_icon"/>
+        <item android:title="Tuần"
+            android:id="@+id/nav_weeks"
+            android:icon="@drawable/ic_weeks_icon"/>
+        <item android:title="Tháng"
+            android:id="@+id/nav_months"
+                android:icon="@drawable/months_icon"/>
+        <item android:title="Biểu đồ máy chạy"
+            android:id="@+id/nav_gantt_chart"
+            android:icon="@drawable/months_icon"/>
+    </group>
+
+    <item android:title="Người dùng">
+        <menu>
+            <group android:checkableBehavior="single">
+                    <item android:title="Hồ sơ người dùng"
+                        android:id="@+id/nav_profile"
+                        android:icon="@drawable/user_profile"
+                        />
+                    <item android:title="Thông báo"
+                        android:id="@+id/nav_notification"
+                        android:icon="@drawable/nofication_icon"
+                        />
+                    <item android:title="Đăng nhập"
+                        android:icon="@drawable/sign_in_icon"
+                        android:id="@+id/nav_SignIn"/>
+
+            </group>
+        </menu>
+    </item>
+    <item android:title="Chia sẻ">
+        <menu>
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_danhgia"
+                    android:title="Đánh giá chúng tôi"
+                    android:icon="@drawable/share_icon"/>
+            </group>
+        </menu>
+    </item>
+</menu>

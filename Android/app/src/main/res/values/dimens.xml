@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="TitleLand">16sp</dimen>
+    <dimen name="MachineValidationLand">0sp</dimen>
+    <dimen name="MachineNameLand">12sp</dimen>
+    <dimen name="_40dp">40dp</dimen>
+    <dimen name="_1dp">1dp</dimen>
+</resources>

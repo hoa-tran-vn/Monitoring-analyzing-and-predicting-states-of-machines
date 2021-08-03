@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineMonitorWebService", "MachineMonitorWebService\MachineMonitorWebService.csproj", "{F6964340-4F4F-4FF0-A9BA-2AF0095D4608}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneDuyKhanhDataAccess", "OneDuyKhanhDataAccess\OneDuyKhanhDataAccess.csproj", "{7975D12A-8664-4694-A7D8-CDB802702643}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6964340-4F4F-4FF0-A9BA-2AF0095D4608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6964340-4F4F-4FF0-A9BA-2AF0095D4608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6964340-4F4F-4FF0-A9BA-2AF0095D4608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6964340-4F4F-4FF0-A9BA-2AF0095D4608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7975D12A-8664-4694-A7D8-CDB802702643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7975D12A-8664-4694-A7D8-CDB802702643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7975D12A-8664-4694-A7D8-CDB802702643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7975D12A-8664-4694-A7D8-CDB802702643}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C890B47-2BA1-4168-B558-5EBD5BEAA3A9}
+	EndGlobalSection
+EndGlobal

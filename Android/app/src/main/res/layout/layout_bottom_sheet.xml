@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:background="@color/CardBackGround_four_opt_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thời gian:"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/ButtonColor_four"
+            android:fontFamily="@font/barlow_medium"
+            android:textSize="15sp"/>
+        <DatePicker
+            android:backgroundTint="@color/ButtonColor_four"
+            android:background="@color/ButtonColor_four"
+            android:id="@+id/Date_picker"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:calendarTextColor="@color/ButtonColor_four"
+            android:calendarViewShown="false"
+            android:spinnersShown="true"/>
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:id="@+id/Bottom_sheet_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:text="Xong"
+            android:fontFamily="@font/barlow_bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OneDuyKhanh4Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="OneDuyKhanh4Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BoGiamSats" EntityType="OneDuyKhanh4Model.BoGiamSat" />
+    <EntitySet Name="ChiTiets" EntityType="OneDuyKhanh4Model.ChiTiet" />
+    <EntitySet Name="CongViecs" EntityType="OneDuyKhanh4Model.CongViec" />
+    <EntitySet Name="LichSuMays" EntityType="OneDuyKhanh4Model.LichSuMay" />
+    <EntitySet Name="Mays" EntityType="OneDuyKhanh4Model.May" />
+    <EntitySet Name="NhanViens" EntityType="OneDuyKhanh4Model.NhanVien" />
+    <EntitySet Name="NhanXet_CanhBao" EntityType="OneDuyKhanh4Model.NhanXet_CanhBao" />
+    <EntitySet Name="NhomMays" EntityType="OneDuyKhanh4Model.NhomMay" />
+    <EntitySet Name="SuaChuas" EntityType="OneDuyKhanh4Model.SuaChua" />
+    <EntitySet Name="ThoiGianMays" EntityType="OneDuyKhanh4Model.ThoiGianMay" />
+    <EntitySet Name="ThoiGianMay_Thang" EntityType="OneDuyKhanh4Model.ThoiGianMay_Thang" />
+    <EntitySet Name="TinhTrangMays" EntityType="OneDuyKhanh4Model.TinhTrangMay" />
+    <EntitySet Name="ToSXes" EntityType="OneDuyKhanh4Model.ToSX" />
+    <AssociationSet Name="FK_BoGiamSat_GiamSatMay" Association="OneDuyKhanh4Model.FK_BoGiamSat_GiamSatMay">
+      <End Role="May" EntitySet="Mays" />
+      <End Role="BoGiamSat" EntitySet="BoGiamSats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThoiGianMay_boGiamSat" Association="OneDuyKhanh4Model.FK_ThoiGianMay_boGiamSat">
+      <End Role="BoGiamSat" EntitySet="BoGiamSats" />
+      <End Role="ThoiGianMay" EntitySet="ThoiGianMays" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TinhTrangMay_boGiamSat" Association="OneDuyKhanh4Model.FK_TinhTrangMay_boGiamSat">
+      <End Role="BoGiamSat" EntitySet="BoGiamSats" />
+      <End Role="TinhTrangMay" EntitySet="TinhTrangMays" />
+    </AssociationSet>
+    <AssociationSet Name="CongViec_ChiTiet" Association="OneDuyKhanh4Model.CongViec_ChiTiet">
+      <End Role="ChiTiet" EntitySet="ChiTiets" />
+      <End Role="CongViec" EntitySet="CongViecs" />
+    </AssociationSet>
+    <AssociationSet Name="CongViec_May" Association="OneDuyKhanh4Model.CongViec_May">
+      <End Role="May" EntitySet="Mays" />
+      <End Role="CongViec" EntitySet="CongViecs" />
+    </AssociationSet>
+    <AssociationSet Name="CongViec_NhanVien" Association="OneDuyKhanh4Model.CongViec_NhanVien">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="CongViec" EntitySet="CongViecs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LichSuMay_GiamSatMay" Association="OneDuyKhanh4Model.FK_LichSuMay_GiamSatMay">
+      <End Role="May" EntitySet="Mays" />
+      <End Role="LichSuMay" EntitySet="LichSuMays" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ThoiGianMay__may__0000D72E" Association="OneDuyKhanh4Model.FK__ThoiGianMay__may__0000D72E">
+      <End Role="May" EntitySet="Mays" />
+      <End Role="ThoiGianMay_Thang" EntitySet="ThoiGianMay_Thang" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SuaChuas_May" Association="OneDuyKhanh4Model.FK_SuaChuas_May">
+      <End Role="May" EntitySet="Mays" />
+      <End Role="SuaChua" EntitySet="SuaChuas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThoiGianMay_may" Association="OneDuyKhanh4Model.FK_ThoiGianMay_may">
+      <End Role="May" EntitySet="Mays" />
+      <End Role="ThoiGianMay" EntitySet="ThoiGianMays" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TinhTrangMay_may" Association="OneDuyKhanh4Model.FK_TinhTrangMay_may">
+      <End Role="May" EntitySet="Mays" />
+      <End Role="TinhTrangMay" EntitySet="TinhTrangMays" />
+    </AssociationSet>
+    <AssociationSet Name="May_ToSX" Association="OneDuyKhanh4Model.May_ToSX">
+      <End Role="ToSX" EntitySet="ToSXes" />
+      <End Role="May" EntitySet="Mays" />
+    </AssociationSet>
+    <AssociationSet Name="NhanVien_ToSX" Association="OneDuyKhanh4Model.NhanVien_ToSX">
+      <End Role="ToSX" EntitySet="ToSXes" />
+      <End Role="NhanVien" EntitySet="NhanViens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NhomMay_ToSX" Association="OneDuyKhanh4Model.FK_NhomMay_ToSX">
+      <End Role="ToSX" EntitySet="ToSXes" />
+      <End Role="NhomMay" EntitySet="NhomMays" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TinhTrangMay_thoigianMay" Association="OneDuyKhanh4Model.FK_TinhTrangMay_thoigianMay">
+      <End Role="ThoiGianMay" EntitySet="ThoiGianMays" />
+      <End Role="TinhTrangMay" EntitySet="TinhTrangMays" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BoGiamSat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaBoGiamSat" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ThoiGianCapNhatCuoiCung" Type="DateTime" Precision="3" />
+    <Property Name="ketNoi" Type="Boolean" />
+    <Property Name="GiamSatMay" Type="Int32" />
+    <Property Name="HinhAnh" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="HinhAnhMay" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="May" Relationship="OneDuyKhanh4Model.FK_BoGiamSat_GiamSatMay" FromRole="BoGiamSat" ToRole="May" />
+    <NavigationProperty Name="ThoiGianMays" Relationship="OneDuyKhanh4Model.FK_ThoiGianMay_boGiamSat" FromRole="BoGiamSat" ToRole="ThoiGianMay" />
+    <NavigationProperty Name="TinhTrangMays" Relationship="OneDuyKhanh4Model.FK_TinhTrangMay_boGiamSat" FromRole="BoGiamSat" ToRole="TinhTrangMay" />
+  </EntityType>
+  <EntityType Name="ChiTiet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaSo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Ten" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuong_1_Bo" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="QuyCach" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SL_Phoi_1_Bo" Type="Int32" Nullable="false" />
+    <Property Name="SL_Phoi" Type="Int32" Nullable="false" />
+    <Property Name="QC_Phoi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="XL_Nhiet" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="XL_BeMat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PhongKT" Type="Boolean" Nullable="false" />
+    <Property Name="DaBaoPhoi" Type="Boolean" Nullable="false" />
+    <Property Name="NgayDatMua" Type="DateTime" Precision="3" />
+    <Property Name="NgayKho_HT" Type="DateTime" Precision="3" />
+    <Property Name="NgayXCK_HT" Type="DateTime" Precision="3" />
+    <Property Name="XCK_HT" Type="Boolean" Nullable="false" />
+    <Property Name="PKD_Mua" Type="Boolean" Nullable="false" />
+    <Property Name="RowVersion" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="ChiTiet_LanBaoPhoi" Type="Int32" />
+    <Property Name="ChiTiet_LenhSanXuat" Type="Int32" Nullable="false" />
+    <Property Name="ChiTiet_NhanVienPKT" Type="Int32" />
+    <Property Name="ChiTiet_VatLieu" Type="Int32" />
+    <Property Name="Color" Type="Int32" />
+    <Property Name="SlgPhoiNhap" Type="Int32" />
+    <Property Name="SlgPhoiXuat" Type="Int32" />
+    <Property Name="SlgPhoiChuaNhan" Type="Int32" />
+    <Property Name="SlgGiaCong" Type="Int32" />
+    <Property Name="SlgHoanThanh" Type="Int32" />
+    <Property Name="FileDinhKemCount" Type="Int32" />
+    <Property Name="ChiTiet_NguoiDung" Type="Int32" />
+    <Property Name="NgayBD" Type="DateTime" Precision="3" />
+    <Property Name="NgayKT" Type="DateTime" Precision="3" />
+    <Property Name="NgayYCCP" Type="DateTime" Precision="3" />
+    <Property Name="NgayDKCP" Type="DateTime" Precision="3" />
+    <Property Name="CuaPhoi" Type="DateTime" Precision="3" />
+    <Property Name="HTLR" Type="Boolean" />
+    <Property Name="GiaCong" Type="Boolean" />
+    <Property Name="DatHang" Type="Boolean" />
+    <Property Name="ThoiDiemCapNhatQTCN" Type="DateTime" Precision="3" />
+    <Property Name="NguoiCapNhatQTCN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ThoiDiemLenKH" Type="DateTime" Precision="3" />
+    <Property Name="NguoiLenKH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DaLenKeHoach" Type="Boolean" />
+    <NavigationProperty Name="CongViecs" Relationship="OneDuyKhanh4Model.CongViec_ChiTiet" FromRole="ChiTiet" ToRole="CongViec" />
+  </EntityType>
+  <EntityType Name="CongViec">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaChiTiet" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="May" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GioBD" Type="DateTime" Precision="3" />
+    <Property Name="GioKT" Type="DateTime" Precision="3" />
+    <Property Name="GhiChu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GioBD_BS" Type="DateTime" Precision="3" />
+    <Property Name="Duyet" Type="DateTime" Precision="3" />
+    <Property Name="GioKT_BS" Type="DateTime" Precision="3" />
+    <Property Name="ThoiLuongBS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Buocs" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RowVersion" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CongViec_BuocHL" Type="Int32" />
+    <Property Name="CongViec_ChiTietHL2" Type="Int32" />
+    <Property Name="CongViec_ChiTiet2" Type="Int32" />
+    <Property Name="CongViec_CongViecPhu" Type="Int32" />
+    <Property Name="CongViec_May1" Type="Int32" />
+    <Property Name="CongViec_NguyenCongHL1" Type="Int32" />
+    <Property Name="CongViec_NhanVien" Type="Int32" Nullable="false" />
+    <Property Name="CongViec_NguyenCong" Type="Int32" />
+    <Property Name="NguyenCongLoSXHL" Type="Int32" />
+    <Property Name="NoiDung" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LenhSanXuat" Type="Int32" />
+    <Property Name="ServerTime" Type="DateTime" Precision="3" />
+    <Property Name="ChonNoiDung" Type="Int32" />
+    <Property Name="IdChiTiet" Type="Int32" />
+    <Property Name="GioSetupXong" Type="DateTime" Precision="3" />
+    <Property Name="GioBDChayMay" Type="DateTime" Precision="3" />
+    <Property Name="GioTamDungLan1" Type="DateTime" Precision="3" />
+    <Property Name="GioBatDauLai1" Type="DateTime" Precision="3" />
+    <Property Name="GioTamDungLan2" Type="DateTime" Precision="3" />
+    <Property Name="GioBatDauLai2" Type="DateTime" Precision="3" />
+    <Property Name="ThoiGianNhanCong" Type="Int32" />
+    <Property Name="SLDoDang" Type="Int32" />
+    <Property Name="DoiTuongLamViec" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChiTiet" Relationship="OneDuyKhanh4Model.CongViec_ChiTiet" FromRole="CongViec" ToRole="ChiTiet" />
+    <NavigationProperty Name="May1" Relationship="OneDuyKhanh4Model.CongViec_May" FromRole="CongViec" ToRole="May" />
+    <NavigationProperty Name="NhanVien" Relationship="OneDuyKhanh4Model.CongViec_NhanVien" FromRole="CongViec" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="LichSuMay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GiamSatMay" Type="Int32" />
+    <Property Name="ThoiGianCapNhat" Type="DateTime" Precision="3" />
+    <Property Name="CongSuatPhaA" Type="Double" />
+    <Property Name="CongSuatPhaB" Type="Double" />
+    <Property Name="CongSuatPhaC" Type="Double" />
+    <Property Name="DongDienPhaA" Type="Double" />
+    <Property Name="DongDienPhaB" Type="Double" />
+    <Property Name="DongDienPhaC" Type="Double" />
+    <Property Name="DienApPhaA" Type="Double" />
+    <Property Name="DienApPhaB" Type="Double" />
+    <Property Name="DienApPhaC" Type="Double" />
+    <Property Name="trangThai" Type="Int32" />
+    <Property Name="Chuoitruyen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="May" Relationship="OneDuyKhanh4Model.FK_LichSuMay_GiamSatMay" FromRole="LichSuMay" ToRole="May" />
+  </EntityType>
+  <EntityType Name="May">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaSo" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Ten" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ThanhLy" Type="Boolean" Nullable="false" />
+    <Property Name="GhiChu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RowVersion" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="May_ToSX" Type="Int32" />
+    <Property Name="NhanHieu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NamSX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NgayBD_VH" Type="DateTime" Precision="3" />
+    <Property Name="DonGia" Type="Double" />
+    <Property Name="UuNhuocDiem" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DangSua" Type="Boolean" />
+    <Property Name="ThongSoKT" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Inactive" Type="Double" />
+    <Property Name="Standby" Type="Double" />
+    <Property Name="Inactivetest" Type="Double" />
+    <Property Name="Standbytest" Type="Double" />
+    <Property Name="LichHoatDongMay_May" Type="Int32" />
+    <Property Name="KHKTHT" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="BoGiamSats" Relationship="OneDuyKhanh4Model.FK_BoGiamSat_GiamSatMay" FromRole="May" ToRole="BoGiamSat" />
+    <NavigationProperty Name="CongViecs" Relationship="OneDuyKhanh4Model.CongViec_May" FromRole="May" ToRole="CongViec" />
+    <NavigationProperty Name="LichSuMays" Relationship="OneDuyKhanh4Model.FK_LichSuMay_GiamSatMay" FromRole="May" ToRole="LichSuMay" />
+    <NavigationProperty Name="ThoiGianMay_Thang" Relationship="OneDuyKhanh4Model.FK__ThoiGianMay__may__0000D72E" FromRole="May" ToRole="ThoiGianMay_Thang" />
+    <NavigationProperty Name="SuaChuas" Relationship="OneDuyKhanh4Model.FK_SuaChuas_May" FromRole="May" ToRole="SuaChua" />
+    <NavigationProperty Name="ThoiGianMays" Relationship="OneDuyKhanh4Model.FK_ThoiGianMay_may" FromRole="May" ToRole="ThoiGianMay" />
+    <NavigationProperty Name="TinhTrangMays" Relationship="OneDuyKhanh4Model.FK_TinhTrangMay_may" FromRole="May" ToRole="TinhTrangMay" />
+    <NavigationProperty Name="ToSX" Relationship="OneDuyKhanh4Model.May_ToSX" FromRole="May" ToRole="ToSX" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaSo" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HoTen" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NghiViec" Type="Boolean" Nullable="false" />
+    <Property Name="Guid" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SlgMacDinh" Type="Int32" Nullable="false" />
+    <Property Name="RowVersion" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="NhanVien_ToSX" Type="Int32" />
+    <Property Name="MatKhau" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NguoiDuyet" Type="Int32" />
+    <Property Name="DoiMatKhau" Type="Boolean" />
+    <Property Name="ToTruong" Type="Int32" />
+    <Property Name="NguoiDung" Type="Int32" />
+    <Property Name="MaChamCong" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BoPhan" Type="Int32" />
+    <NavigationProperty Name="CongViecs" Relationship="OneDuyKhanh4Model.CongViec_NhanVien" FromRole="NhanVien" ToRole="CongViec" />
+    <NavigationProperty Name="ToSX" Relationship="OneDuyKhanh4Model.NhanVien_ToSX" FromRole="NhanVien" ToRole="ToSX" />
+  </EntityType>
+  <EntityType Name="NhanXet_CanhBao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayCapNhat" Type="DateTime" Precision="3" />
+    <Property Name="NoiDung" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PhanLoai" Type="Int32" />
+    <Property Name="MaCanhBao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CapDo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NhomMay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ToSX" Type="Int32" />
+    <Property Name="MoTa" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GiaTriCap1" Type="Double" />
+    <Property Name="GiaTriCap2" Type="Double" />
+    <NavigationProperty Name="ToSX1" Relationship="OneDuyKhanh4Model.FK_NhomMay_ToSX" FromRole="NhomMay" ToRole="ToSX" />
+  </EntityType>
+  <EntityType Name="SuaChua">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayYeuCau" Type="DateTime" Precision="3" />
+    <Property Name="NgayYCHT" Type="DateTime" Precision="3" />
+    <Property Name="May" Type="Int32" />
+    <Property Name="NguoiYeuCau" Type="Int32" />
+    <Property Name="NoiDungHong" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="NgayNhan" Type="DateTime" Precision="3" />
+    <Property Name="NguoiSua" Type="Int32" />
+    <Property Name="NgayHoanThanh" Type="DateTime" Precision="3" />
+    <Property Name="NgayNghiemThu" Type="DateTime" Precision="3" />
+    <Property Name="TenThietBi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NguoiNhanBanGiao" Type="Int32" />
+    <Property Name="NhanSuaMay" Type="Boolean" />
+    <Property Name="HoanThanh" Type="Boolean" />
+    <Property Name="NghiemThu" Type="Boolean" />
+    <NavigationProperty Name="May1" Relationship="OneDuyKhanh4Model.FK_SuaChuas_May" FromRole="SuaChua" ToRole="May" />
+  </EntityType>
+  <EntityType Name="ThoiGianMay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayCapNhat" Type="DateTime" Precision="3" />
+    <Property Name="may" Type="Int32" />
+    <Property Name="boGiamSat" Type="Int32" />
+    <Property Name="Trangthaimay" Type="Int32" />
+    <Property Name="RunningTime" Type="Int32" />
+    <Property Name="WaitTime" Type="Int32" />
+    <Property Name="BreakDownTime" Type="Int32" />
+    <Property Name="SetUpTime" Type="Int32" />
+    <Property Name="OffTime" Type="Int32" />
+    <Property Name="congsuat" Type="Double" />
+    <Property Name="NangLuong" Type="Double" />
+    <Property Name="ReadyTime" Type="Int32" />
+    <Property Name="RunErrTime" Type="Int32" />
+    <NavigationProperty Name="BoGiamSat1" Relationship="OneDuyKhanh4Model.FK_ThoiGianMay_boGiamSat" FromRole="ThoiGianMay" ToRole="BoGiamSat" />
+    <NavigationProperty Name="May1" Relationship="OneDuyKhanh4Model.FK_ThoiGianMay_may" FromRole="ThoiGianMay" ToRole="May" />
+    <NavigationProperty Name="TinhTrangMays" Relationship="OneDuyKhanh4Model.FK_TinhTrangMay_thoigianMay" FromRole="ThoiGianMay" ToRole="TinhTrangMay" />
+  </EntityType>
+  <EntityType Name="ThoiGianMay_Thang">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayCapNhat" Type="DateTime" Precision="0" />
+    <Property Name="may" Type="Int32" />
+    <Property Name="boGiamSat" Type="Int32" />
+    <Property Name="RunningTime" Type="Int32" />
+    <Property Name="WaitTime" Type="Int32" />
+    <Property Name="BreakDownTime" Type="Int32" />
+    <Property Name="SetUpTime" Type="Int32" />
+    <Property Name="OffTime" Type="Int32" />
+    <Property Name="congsuat" Type="Double" />
+    <Property Name="NangLuong" Type="Double" />
+    <Property Name="ReadyTime" Type="Int32" />
+    <NavigationProperty Name="May1" Relationship="OneDuyKhanh4Model.FK__ThoiGianMay__may__0000D72E" FromRole="ThoiGianMay_Thang" ToRole="May" />
+  </EntityType>
+  <EntityType Name="TinhTrangMay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="boGiamSat" Type="Int32" />
+    <Property Name="may" Type="Int32" />
+    <Property Name="trangThai" Type="Int32" />
+    <Property Name="CongSuat" Type="Double" />
+    <Property Name="ThoiGianCapNhatCuoiCung" Type="DateTime" Precision="3" />
+    <Property Name="HinhAnh" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="thoigianMay" Type="Int32" />
+    <NavigationProperty Name="BoGiamSat1" Relationship="OneDuyKhanh4Model.FK_TinhTrangMay_boGiamSat" FromRole="TinhTrangMay" ToRole="BoGiamSat" />
+    <NavigationProperty Name="May1" Relationship="OneDuyKhanh4Model.FK_TinhTrangMay_may" FromRole="TinhTrangMay" ToRole="May" />
+    <NavigationProperty Name="ThoiGianMay1" Relationship="OneDuyKhanh4Model.FK_TinhTrangMay_thoigianMay" FromRole="TinhTrangMay" ToRole="ThoiGianMay" />
+  </EntityType>
+  <EntityType Name="ToSX">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GiaCongNgoai" Type="Boolean" Nullable="false" />
+    <Property Name="GhiChu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ToTruong" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RowVersion" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="ToSX_TroLiSX" Type="Int32" />
+    <Property Name="ToSX_NguoiDung" Type="Int32" />
+    <Property Name="ToSX_NguoiDung1" Type="Int32" />
+    <NavigationProperty Name="Mays" Relationship="OneDuyKhanh4Model.May_ToSX" FromRole="ToSX" ToRole="May" />
+    <NavigationProperty Name="NhanViens" Relationship="OneDuyKhanh4Model.NhanVien_ToSX" FromRole="ToSX" ToRole="NhanVien" />
+    <NavigationProperty Name="NhomMays" Relationship="OneDuyKhanh4Model.FK_NhomMay_ToSX" FromRole="ToSX" ToRole="NhomMay" />
+  </EntityType>
+  <Association Name="FK_BoGiamSat_GiamSatMay">
+    <End Type="OneDuyKhanh4Model.May" Role="May" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.BoGiamSat" Role="BoGiamSat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="May">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BoGiamSat">
+        <PropertyRef Name="GiamSatMay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThoiGianMay_boGiamSat">
+    <End Type="OneDuyKhanh4Model.BoGiamSat" Role="BoGiamSat" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.ThoiGianMay" Role="ThoiGianMay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BoGiamSat">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ThoiGianMay">
+        <PropertyRef Name="boGiamSat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TinhTrangMay_boGiamSat">
+    <End Type="OneDuyKhanh4Model.BoGiamSat" Role="BoGiamSat" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.TinhTrangMay" Role="TinhTrangMay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BoGiamSat">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TinhTrangMay">
+        <PropertyRef Name="boGiamSat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CongViec_ChiTiet">
+    <End Type="OneDuyKhanh4Model.ChiTiet" Role="ChiTiet" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.CongViec" Role="CongViec" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChiTiet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CongViec">
+        <PropertyRef Name="CongViec_ChiTiet2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CongViec_May">
+    <End Type="OneDuyKhanh4Model.May" Role="May" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.CongViec" Role="CongViec" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="May">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CongViec">
+        <PropertyRef Name="CongViec_May1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CongViec_NhanVien">
+    <End Type="OneDuyKhanh4Model.NhanVien" Role="NhanVien" Multiplicity="1" />
+    <End Type="OneDuyKhanh4Model.CongViec" Role="CongViec" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CongViec">
+        <PropertyRef Name="CongViec_NhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LichSuMay_GiamSatMay">
+    <End Type="OneDuyKhanh4Model.May" Role="May" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.LichSuMay" Role="LichSuMay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="May">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LichSuMay">
+        <PropertyRef Name="GiamSatMay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ThoiGianMay__may__0000D72E">
+    <End Type="OneDuyKhanh4Model.May" Role="May" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.ThoiGianMay_Thang" Role="ThoiGianMay_Thang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="May">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ThoiGianMay_Thang">
+        <PropertyRef Name="may" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SuaChuas_May">
+    <End Type="OneDuyKhanh4Model.May" Role="May" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.SuaChua" Role="SuaChua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="May">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SuaChua">
+        <PropertyRef Name="May" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThoiGianMay_may">
+    <End Type="OneDuyKhanh4Model.May" Role="May" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.ThoiGianMay" Role="ThoiGianMay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="May">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ThoiGianMay">
+        <PropertyRef Name="may" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TinhTrangMay_may">
+    <End Type="OneDuyKhanh4Model.May" Role="May" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.TinhTrangMay" Role="TinhTrangMay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="May">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TinhTrangMay">
+        <PropertyRef Name="may" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="May_ToSX">
+    <End Type="OneDuyKhanh4Model.ToSX" Role="ToSX" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.May" Role="May" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ToSX">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="May">
+        <PropertyRef Name="May_ToSX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NhanVien_ToSX">
+    <End Type="OneDuyKhanh4Model.ToSX" Role="ToSX" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.NhanVien" Role="NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ToSX">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NhanVien">
+        <PropertyRef Name="NhanVien_ToSX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NhomMay_ToSX">
+    <End Type="OneDuyKhanh4Model.ToSX" Role="ToSX" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.NhomMay" Role="NhomMay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ToSX">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NhomMay">
+        <PropertyRef Name="ToSX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TinhTrangMay_thoigianMay">
+    <End Type="OneDuyKhanh4Model.ThoiGianMay" Role="ThoiGianMay" Multiplicity="0..1" />
+    <End Type="OneDuyKhanh4Model.TinhTrangMay" Role="TinhTrangMay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThoiGianMay">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TinhTrangMay">
+        <PropertyRef Name="thoigianMay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

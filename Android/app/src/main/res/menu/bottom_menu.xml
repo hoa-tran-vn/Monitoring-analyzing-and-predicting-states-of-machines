@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Ngày"
+        android:id="@+id/nav_days"
+        android:icon="@drawable/ic_days_icon"
+        />
+    <item android:title="Trang chính"
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_icon"
+        />
+    <item android:title="Tuần"
+        android:id="@+id/nav_weeks"
+        android:icon="@drawable/ic_weeks_icon"
+        />
+
+</menu>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- Theme_one -->
+    <color name="MainBackGround">#242539</color>
+    <color name="ButtonColor">#6C31FF</color>
+    <color name="ButtonColorTwo">#AA82FF</color>
+    <color name="TextColor">#8659FE</color>
+    <color name="TextCoLorTwo">#CEAFFF</color>
+    <color name="TextCoLorThree">#3D326C</color>
+
+    <!-- theme_two -->
+    <color name="MainBackRound_two">#0F111E</color>
+    <color name="CardColor_two">#121622</color>
+    <color name="ButtonColor_two">#B22DE8</color>
+    <color name="TextColor_two">#1DD1E2</color>
+    <color name="IconColor_two">#1AD5E2</color>
+
+    <!-- theme_three -->
+    <color name="MainBackRound_three">#23262D</color>
+    <color name="CardColor_three">#48424E</color>
+    <color name="ButtonColor_three">#FF6D1A</color>
+    <color name="TextColor_three">#FFDDF8</color>
+    <color name="IconColor_three">#ACCF2C</color>
+    <!-- Theme four -->
+    <color name="BackGround_four">#22272C</color>
+    <color name="CardBackGround_four_opt_one">#2E343B</color>
+    <color name="CardBackGround_four_opt_two">#19202A</color>
+    <color name="TextColor_four_opt_one">#5DB9FA</color>
+    <color name="TextColor_four_opt_two">#FDFDFE</color>
+    <color name="ButtonColor_four">#FFBF00</color>
+    <color name="IconColor_four">#FFBF00</color>
+    <!--Pie chart Color -->
+    <color name="PieChart_color_one">#FB6E40</color>
+    <color name="PieChart_color_two">#DAD0CF</color>
+    <color name="PieChart_color_three">#87888A</color>
+    <color name="PieChart_color_four">#666971</color>
+    <!--Grantt chart Color -->
+    <color name="Off_Color">#373C43</color>
+    <color name="Waiting_Color">#FF0000</color>
+    <color name="Ready_Color">#0000FF</color>
+    <color name="SetUp_Color">#FFFF00</color>
+    <color name="Running_Color">#00FF00</color>
+    <color name="BreakDown_Color">#00BCD4</color>
+    <color name="VangXanh">#19202A</color>
+</resources>

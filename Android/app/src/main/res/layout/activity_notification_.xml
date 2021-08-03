@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Notification_Activity"
+    android:orientation="vertical"
+    android:background="@color/CardBackGround_four_opt_two"
+    >
+    <LinearLayout
+        android:id="@+id/notification_taskBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:background="@drawable/back_button_shape"
+            android:id="@+id/notification_backBtn"
+            android:layout_gravity="start"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back_icon"
+            android:onClick="Back"
+            />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/notification_taskBar"
+        android:id="@+id/Notification_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/Notification_BottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_menu"
+        app:itemIconTint="@color/ButtonColor_four"
+        app:itemTextColor="@color/ButtonColor_four"
+        android:background="@color/CardBackGround_four_opt_one"
+        />
+
+</RelativeLayout>

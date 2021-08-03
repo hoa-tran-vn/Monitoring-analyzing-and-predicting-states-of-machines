@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:transitionName="Information_Btn_transition"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailInformation">
+
+    <RelativeLayout
+        android:id="@+id/Relate_layout_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:background="@color/CardBackGround_four_opt_one"
+        >
+
+        <ImageView
+            android:onClick="Back"
+            android:id="@+id/MachineDetail_backBtn"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/back_button_shape"
+            android:src="@drawable/back_icon" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Relate_layout_one"
+        android:layout_marginBottom="50dp"
+        android:background="@color/BackGround_four"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_shape"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/DetailInfor_DayCardOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:text="27-July"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/barlow_light"
+                    android:text="Tình trạng máy trong ngày"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/TextColor_four_opt_two" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:text="Mã máy"
+                    android:textColor="@color/ButtonColor_four" />
+
+                <TextView
+                    android:id="@+id/DetailInfor_MachineID"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/barlow_light"
+                    android:text="Null"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:text="Tên máy"
+                    android:textColor="@color/ButtonColor_four" />
+
+                <TextView
+                    android:id="@+id/DetailInfor_MachineDuty"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/barlow_light"
+                    android:text="Null"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:text="Tình trạng máy"
+                    android:textColor="@color/ButtonColor_four" />
+
+                <TextView
+                    android:id="@+id/DetailInfor_MachineStatus"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/barlow_light"
+                    android:text="Null"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:text="Thời gian khởi động"
+                    android:textColor="@color/ButtonColor_four" />
+
+                <TextView
+                    android:id="@+id/DetailInfor_MachineStartTime"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/barlow_light"
+                    android:text="Null"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:text="Máy hỏng"
+                    android:textColor="@color/ButtonColor_four" />
+
+                <TextView
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/barlow_light"
+                    android:text="None"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:text="Xuất sứ"
+                    android:textColor="@color/ButtonColor_four" />
+
+                <TextView
+                    android:id="@+id/DetailInfor_MachineOrigin"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/barlow_light"
+                    android:text="Null"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/DetailInfor_DayCardTwo"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:text="27-July"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/barlow_light"
+                    android:text= "Thông tin nhân viên"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Họ/tên"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/ButtonColor_four"/>
+
+                <TextView
+                    android:id="@+id/DetailInfor_WorkerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:text="Null"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:fontFamily="@font/barlow_light"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mã nhân viên"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/ButtonColor_four"/>
+
+                <TextView
+                    android:id="@+id/DetailInfor_WorkerID"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/barlow_light"
+                    android:text="Null"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nhóm tổ"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/ButtonColor_four"/>
+
+                <TextView
+                    android:id="@+id/DetailInfor_WorkerGroup"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/barlow_light"
+                    android:text="Null"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tổ trưởng"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/ButtonColor_four"/>
+
+                <TextView
+                    android:id="@+id/DetailInfor_LeaderGroupName"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/barlow_light"
+                    android:text="Null"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Số điên thoại"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/ButtonColor_four"/>
+
+                <TextView
+                    android:id="@+id/DetailInfor_WorkerSDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:text="Null"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:fontFamily="@font/barlow_light"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/ButtonColor_four"/>
+
+                <TextView
+                    android:id="@+id/DetailInfor_WorkerEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:text="Null"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:fontFamily="@font/barlow_light"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/DetailInfor_DayCardThree"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:text="27-July"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/barlow_light"
+                    android:text= "Thông tin sản phẩm"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tên chi tiết"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/ButtonColor_four"/>
+
+                <TextView
+                    android:id="@+id/DetailInfor_ProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:text="Null"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:fontFamily="@font/barlow_light"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mã chi tiết"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/ButtonColor_four"/>
+
+                <TextView
+                    android:id="@+id/DetailInfor_ProductID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:text="Null"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:fontFamily="@font/barlow_light"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Số lượng sản phẩm"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/barlow_medium"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/ButtonColor_four"/>
+
+                <TextView
+                    android:id="@+id/DetailInfor_ProductAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:text="Null"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/TextColor_four_opt_two"
+                    android:fontFamily="@font/barlow_light"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/DetailInfor_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_menu"
+        android:background="@color/CardBackGround_four_opt_one"
+        app:itemIconTint="@color/ButtonColor_four"
+        app:itemTextColor="@color/ButtonColor_four">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

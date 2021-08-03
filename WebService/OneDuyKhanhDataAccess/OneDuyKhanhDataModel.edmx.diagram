@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="95515eae289046ee8ed7e176a448a1da" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="OneDuyKhanh4Model.BoGiamSat" Width="1.5" PointX="9.375" PointY="33.25" />
+        <EntityTypeShape EntityType="OneDuyKhanh4Model.ChiTiet" Width="1.5" PointX="18.75" PointY="20" />
+        <EntityTypeShape EntityType="OneDuyKhanh4Model.CongViec" Width="1.5" PointX="15.125" PointY="19.75" />
+        <EntityTypeShape EntityType="OneDuyKhanh4Model.LichSuMay" Width="1.5" PointX="2.75" PointY="30.625" />
+        <EntityTypeShape EntityType="OneDuyKhanh4Model.May" Width="1.5" PointX="7" PointY="25.5" />
+        <EntityTypeShape EntityType="OneDuyKhanh4Model.NhanVien" Width="1.5" PointX="10.125" PointY="20.5" />
+        <EntityTypeShape EntityType="OneDuyKhanh4Model.NhanXet_CanhBao" Width="1.5" PointX="6" PointY="20.875" />
+        <EntityTypeShape EntityType="OneDuyKhanh4Model.NhomMay" Width="1.5" PointX="1.125" PointY="21.875" />
+        <EntityTypeShape EntityType="OneDuyKhanh4Model.SuaChua" Width="1.5" PointX="12.75" PointY="29.25" />
+        <EntityTypeShape EntityType="OneDuyKhanh4Model.ThoiGianMay" Width="1.5" PointX="15.875" PointY="29.5" />
+        <EntityTypeShape EntityType="OneDuyKhanh4Model.ThoiGianMay_Thang" Width="1.5" PointX="0.625" PointY="26.125" />
+        <EntityTypeShape EntityType="OneDuyKhanh4Model.TinhTrangMay" Width="1.5" PointX="18.75" PointY="30.375" />
+        <EntityTypeShape EntityType="OneDuyKhanh4Model.ToSX" Width="1.5" PointX="3.5" PointY="23.25" />
+        <AssociationConnector Association="OneDuyKhanh4Model.FK_BoGiamSat_GiamSatMay" />
+        <AssociationConnector Association="OneDuyKhanh4Model.FK_ThoiGianMay_boGiamSat" />
+        <AssociationConnector Association="OneDuyKhanh4Model.FK_TinhTrangMay_boGiamSat" />
+        <AssociationConnector Association="OneDuyKhanh4Model.CongViec_ChiTiet" />
+        <AssociationConnector Association="OneDuyKhanh4Model.CongViec_May" />
+        <AssociationConnector Association="OneDuyKhanh4Model.CongViec_NhanVien" />
+        <AssociationConnector Association="OneDuyKhanh4Model.FK_LichSuMay_GiamSatMay" />
+        <AssociationConnector Association="OneDuyKhanh4Model.FK__ThoiGianMay__may__0000D72E" />
+        <AssociationConnector Association="OneDuyKhanh4Model.FK_SuaChuas_May" />
+        <AssociationConnector Association="OneDuyKhanh4Model.FK_ThoiGianMay_may" />
+        <AssociationConnector Association="OneDuyKhanh4Model.FK_TinhTrangMay_may" />
+        <AssociationConnector Association="OneDuyKhanh4Model.May_ToSX" />
+        <AssociationConnector Association="OneDuyKhanh4Model.NhanVien_ToSX" />
+        <AssociationConnector Association="OneDuyKhanh4Model.FK_NhomMay_ToSX" />
+        <AssociationConnector Association="OneDuyKhanh4Model.FK_TinhTrangMay_thoigianMay" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

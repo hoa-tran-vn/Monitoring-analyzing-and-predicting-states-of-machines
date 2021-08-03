@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/back_shadow"/>
+    <item>
+        <shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+            <gradient android:startColor="@color/ButtonColor_four"
+                android:endColor="#FFEB3B"
+                android:angle="0"/>
+        </shape>
+
+    </item>
+
+</layer-list>
+

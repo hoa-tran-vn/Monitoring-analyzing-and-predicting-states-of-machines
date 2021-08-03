@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainBackRound_three"
+    tools:context=".Days">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/Relate_layout_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:background="@color/CardBackGround_four_opt_one"
+            >
+
+            <ImageView
+                android:background="@drawable/back_button_shape"
+                android:onClick="Back"
+                android:id="@+id/Days_backBtn"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/back_icon" />
+
+            <ImageView
+                android:transitionName="Notification_transition"
+                android:id="@+id/Days_notificationBell"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"
+                android:src="@drawable/nofication_icon" />
+            <TextView
+                android:id="@+id/Days_NotificationNumber"
+                android:transitionName="NotificationNumber_transition"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginTop="3dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="invisible"
+                android:textSize="10sp"
+                android:background="@drawable/notification_shape"
+                android:fontFamily="@font/barlow_bold"
+                android:textAlignment="center"
+                android:textColor="@color/TextColor_four_opt_two"
+                android:layout_toRightOf="@+id/Days_notificationBell"/>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/Days_Card_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="460dp"
+                    android:background="@drawable/card_shape"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/Days_Power"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/barlow_bold"
+                        android:text="0 KWh"
+                        android:textColor="@color/TextColor_four_opt_two"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/Days_PowerDecs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/barlow_medium"
+                        android:text="Tổng năng lượng trong ngày"
+                        android:textColor="@color/TextColor_four_opt_two" />
+                    <RelativeLayout
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:visibility="invisible"
+                            android:id="@+id/Days_Date_Card_One"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ngày // tháng //  năm"
+                            android:fontFamily="@font/barlow_light"
+                            android:textColor="@color/TextColor_four_opt_two"/>
+                        <ImageView
+                            android:clickable="false"
+                            android:onClick="DatePicker"
+                            android:id="@+id/Days_Date_Picker"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="25dp"
+                            android:src="@drawable/date_icon"
+                            android:layout_height="25dp"/>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/Days_BarChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/Days_Card_Caution_one"
+                        android:visibility="invisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dữ liệu đang được cập nhật!"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/TextColor_four_opt_two"
+                        android:fontFamily="@font/barlow_medium"/>
+                    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+                        android:visibility="invisible"
+                        android:layout_marginBottom="5dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="20dp"
+                        android:id="@+id/LazyLoaderOne"
+                        android:layout_height="20dp"
+                        app:lazyloader_animDur="300"
+                        app:lazyloader_dotsDist="5dp"
+                        app:lazyloader_dotsRadius="3dp"
+                        app:lazyloader_firstDelayDur="150"
+                        app:lazyloader_firstDotColor="#FFC107"
+                        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+                        app:lazyloader_secondDelayDur="300"
+                        app:lazyloader_secondDotColor="#FFC107"
+                        app:lazyloader_thirdDotColor="#FFC107" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Days_Card_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="440dp"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/card_shape"
+                    >
+
+                    <TextView
+                        android:id="@+id/Days_ProductivityDesc"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Biểu đồ tổng công suất trong ngày."
+                        android:textColor="@color/TextColor_four_opt_two"
+                        android:fontFamily="@font/barlow_medium"
+                        android:layout_marginLeft="20dp"/>
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/Days_Date_Card_Two"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ngày // tháng //  năm"
+                        android:fontFamily="@font/barlow_light"
+                        android:textColor="@color/TextColor_four_opt_two"/>
+
+                    <LinearLayout
+                        android:padding="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:orientation="vertical">
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/Days_LineChart"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/Days_Card_Caution_two"
+                        android:visibility="invisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dữ liệu đang được cập nhật!"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/TextColor_four_opt_two"
+                        android:fontFamily="@font/barlow_medium"/>
+                    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+                        android:visibility="invisible"
+                        android:layout_marginBottom="5dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="20dp"
+                        android:id="@+id/LazyLoaderTwo"
+                        android:layout_height="20dp"
+                        app:lazyloader_animDur="300"
+                        app:lazyloader_dotsDist="5dp"
+                        app:lazyloader_dotsRadius="3dp"
+                        app:lazyloader_firstDelayDur="150"
+                        app:lazyloader_firstDotColor="#FFC107"
+                        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+                        app:lazyloader_secondDelayDur="300"
+                        app:lazyloader_secondDotColor="#FFC107"
+                        app:lazyloader_thirdDotColor="#FFC107" />
+
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/Days_Card_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="440dp"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/card_shape">
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hiệu suất nhà máy trong ngày"
+                        android:textColor="@color/TextColor_four_opt_two"
+                        android:fontFamily="@font/barlow_medium"
+                        android:layout_marginLeft="20dp"/>
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/Days_Date_Card_Three"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ngày // tháng //  năm"
+                        android:fontFamily="@font/barlow_light"
+                        android:textColor="@color/TextColor_four_opt_two"/>
+
+                    <LinearLayout
+                        android:padding="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:orientation="vertical">
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/Days_PieChart"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/Days_Card_Caution_three"
+                        android:visibility="invisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dữ liệu đang được cập nhật!"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/TextColor_four_opt_two"
+                        android:fontFamily="@font/barlow_medium"/>
+
+                    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+                        android:visibility="invisible"
+                        android:layout_marginBottom="5dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="20dp"
+                        android:id="@+id/LazyLoaderThree"
+                        android:layout_height="20dp"
+                        app:lazyloader_animDur="300"
+                        app:lazyloader_dotsDist="5dp"
+                        app:lazyloader_dotsRadius="3dp"
+                        app:lazyloader_firstDelayDur="150"
+                        app:lazyloader_firstDotColor="#FFC107"
+                        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+                        app:lazyloader_secondDelayDur="300"
+                        app:lazyloader_secondDotColor="#FFC107"
+                        app:lazyloader_thirdDotColor="#FFC107" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/Days_Bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_menu"
+        app:itemIconTint="@color/ButtonColor_four"
+        app:itemTextColor="@color/ButtonColor_four"
+        android:background="@color/CardBackGround_four_opt_one"
+        />
+
+</RelativeLayout>

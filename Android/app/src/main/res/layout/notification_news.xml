@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="15dp"
+    >
+
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_marginStart="-5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/nofication_icon"
+            android:layout_alignParentStart="true"
+            android:id="@+id/notification_icon"
+            />
+        <RelativeLayout
+            android:id="@+id/contentView"
+            android:background="@color/CardBackGround_four_opt_one"
+            android:layout_toRightOf="@id/notification_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:id="@+id/task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <TextView
+            android:layout_weight="9"
+            android:layout_gravity="start"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/barlow_bold"
+            android:text="Thông báo hệ thống"
+            android:textColor="@color/ButtonColor_four"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Deleete"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:textColor="@color/ButtonColor_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/barlow_bold"
+            android:textSize="15sp"
+            android:text="Xóa"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            />
+
+
+    </LinearLayout>
+            <TextView
+                android:id="@+id/Category"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cấp độ"
+                android:fontFamily="@font/barlow_bold"
+                android:layout_below="@+id/task"
+                android:textColor="@color/ButtonColor_four"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/Category"
+            android:id="@+id/notification_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/barlow_medium"
+            android:layout_marginBottom="10dp"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            android:textColor="@color/TextColor_four_opt_two" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

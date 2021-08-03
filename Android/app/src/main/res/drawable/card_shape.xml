@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shadowtwo"/>
+    <item>
+        <shape android:shape="rectangle"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="17dp"/>
+            <gradient android:angle="225"
+                android:startColor="@color/CardBackGround_four_opt_one"
+                android:endColor="@color/CardBackGround_four_opt_two"/>
+        </shape>
+    </item>
+</layer-list>

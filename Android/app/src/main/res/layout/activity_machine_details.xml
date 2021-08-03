@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/BackGround_four"
+    tools:context=".MachineDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/Relate_layout_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:background="@color/CardBackGround_four_opt_one"
+            >
+
+            <ImageView
+                android:id="@+id/MachineDetail_backBtn"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:onClick="Back"
+                android:background="@drawable/back_button_shape"
+                android:src="@drawable/back_icon" />
+
+            <ImageView
+                android:transitionName="Notification_transition"
+                android:id="@+id/MachineDetail_notificationBell"
+                android:layout_marginEnd="25dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/nofication_icon" />
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/MachineDetail_notificationNumber"
+                android:transitionName="NotificationNumber_transition"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginTop="3dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:textSize="10sp"
+                android:background="@drawable/notification_shape"
+                android:fontFamily="@font/barlow_bold"
+                android:textAlignment="center"
+                android:textColor="@color/TextColor_four_opt_two"
+                android:layout_toRightOf="@+id/MachineDetail_notificationBell"/>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_shape"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/MachineDetail_Date_Card_One"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/barlow_medium"
+                        android:text="27-July"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/TextColor_four_opt_two"
+                        android:textSize="20sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/barlow_light"
+                            android:text= "Bảng tóm tắt thông tin"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/TextColor_four_opt_two"/>
+                        <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+                            android:layout_gravity="end"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="20dp"
+                            android:id="@+id/LazyLoaderOne"
+                            android:layout_height="20dp"
+                            app:lazyloader_animDur="300"
+                            app:lazyloader_dotsDist="5dp"
+                            app:lazyloader_dotsRadius="4dp"
+                            app:lazyloader_firstDelayDur="150"
+                            app:lazyloader_firstDotColor="#FFC107"
+                            app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+                            app:lazyloader_secondDelayDur="300"
+                            app:lazyloader_secondDotColor="#FFC107"
+                            app:lazyloader_thirdDotColor="#FFC107" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/barlow_medium"
+                            android:text="Mã máy :"
+                            android:textColor="@color/ButtonColor_four"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/MachineDetail_MachineID"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/barlow_light"
+                            android:text="Null"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/TextColor_four_opt_two"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/barlow_medium"
+                            android:text="Tình trạng :"
+                            android:textColor="@color/ButtonColor_four"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/MachineDetail_MachineStatus"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/barlow_light"
+                            android:text="Null"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/TextColor_four_opt_two"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/barlow_medium"
+                            android:text="Nhân viên:"
+                            android:textColor="@color/ButtonColor_four"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/MachineDetail_WorkerName"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/barlow_light"
+                            android:text="Null"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/TextColor_four_opt_two"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/barlow_medium"
+                            android:text="Mã chi tiết :"
+                            android:textColor="@color/ButtonColor_four"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/MachineDetail_ProductName"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/barlow_light"
+                            android:text="Null"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/TextColor_four_opt_two"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/barlow_medium"
+                            android:text="Thời gian khởi động :"
+                            android:textColor="@color/ButtonColor_four"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/MachineDetail_TimeStart"
+                            android:layout_width="117dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/barlow_light"
+                            android:text="Null"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/TextColor_four_opt_two"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:onClick="MoreInforMation"
+                        android:visibility="invisible"
+                        android:id="@+id/MachineDetail_moreInforBtn"
+                        android:transitionName="Information_Btn_transition"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button_shape"
+                        android:fontFamily="@font/barlow_medium"
+                        android:layout_marginBottom="20dp"
+                        android:text="Thêm thông tin"
+                        android:textAllCaps="false"
+                        android:textColor="@color/BackGround_four" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:padding="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:onClick="DateOptional"
+                        android:id="@+id/MachineDetail_Date_Card_Two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/barlow_medium"
+                        android:text="27-July"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/TextColor_four_opt_two"
+                        android:textSize="20sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/barlow_light"
+                            android:text= "Biểu đồ công suất máy chạy"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/TextColor_four_opt_two"
+                            />
+                        <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+                            android:id="@+id/LazyLoaderTwo"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:lazyloader_animDur="300"
+                            app:lazyloader_dotsDist="5dp"
+                            app:lazyloader_dotsRadius="4dp"
+                            app:lazyloader_firstDelayDur="150"
+                            app:lazyloader_firstDotColor="#FFC107"
+                            app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+                            app:lazyloader_secondDelayDur="300"
+                            app:lazyloader_secondDotColor="#FFC107"
+                            app:lazyloader_thirdDotColor="#FFC107" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/MachineDetail_barChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/MachineDetail_Graph_Caution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Đang tải dữ liệu!"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/barlow_medium"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/TextColor_four_opt_two"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:padding="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/MachineDetail_Date_Card_Four"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/barlow_medium"
+                        android:onClick="DateOptional"
+                        android:text="27-July"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/TextColor_four_opt_two"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/barlow_light"
+                            android:text= "Biểu đồ thời gian máy chạy"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/TextColor_four_opt_two"
+                            />
+                        <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+                            android:id="@+id/LazyLoaderFour"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:lazyloader_animDur="300"
+                            app:lazyloader_dotsDist="5dp"
+                            app:lazyloader_dotsRadius="4dp"
+                            app:lazyloader_firstDelayDur="150"
+                            app:lazyloader_firstDotColor="#FFC107"
+                            app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+                            app:lazyloader_secondDelayDur="300"
+                            app:lazyloader_secondDotColor="#FFC107"
+                            app:lazyloader_thirdDotColor="#FFC107" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <ListView
+                            android:id="@+id/listViewGanttChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/MachineDetail_ProcessChart_Caution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Đang tải dữ liệu!"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/barlow_medium"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/TextColor_four_opt_two"/>
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_margin="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <View
+                                    android:background="@color/TextColor_four_opt_two"
+                                    android:layout_width="20dp"
+                                    android:layout_height="match_parent"/>
+                                <TextView
+                                    android:textColor="@color/TextColor_four_opt_two"
+                                    android:fontFamily="@font/barlow_light"
+                                    android:text="Disable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <View
+                                    android:background="#964B00"
+                                    android:layout_width="20dp"
+                                    android:layout_height="match_parent"/>
+                                <TextView
+
+                                    android:textColor="@color/TextColor_four_opt_two"
+                                    android:fontFamily="@font/barlow_light"
+                                    android:text="Available"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_margin="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <View
+                                    android:background="#808080"
+                                    android:layout_width="20dp"
+                                    android:layout_height="match_parent"/>
+                                <TextView
+                                    android:textColor="@color/TextColor_four_opt_two"
+                                    android:fontFamily="@font/barlow_light"
+                                    android:text="Off"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <View
+                                    android:background="#ff9a00"
+                                    android:layout_width="20dp"
+                                    android:layout_height="match_parent"/>
+                                <TextView
+                                    android:textColor="@color/TextColor_four_opt_two"
+                                    android:fontFamily="@font/barlow_light"
+                                    android:text="Wait"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_margin="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <View
+                                    android:background="#ffff00"
+                                    android:layout_width="20dp"
+                                    android:layout_height="match_parent"/>
+                                <TextView
+                                    android:textColor="@color/TextColor_four_opt_two"
+                                    android:fontFamily="@font/barlow_light"
+                                    android:text="Ready"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <View
+                                    android:background="#5DB9FA"
+                                    android:layout_width="20dp"
+                                    android:layout_height="match_parent"/>
+                                <TextView
+                                    android:textColor="@color/TextColor_four_opt_two"
+                                    android:fontFamily="@font/barlow_light"
+                                    android:text="SetUp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_margin="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <View
+                                    android:background="#00ff00"
+                                    android:layout_width="20dp"
+                                    android:layout_height="match_parent"/>
+                                <TextView
+                                    android:textColor="@color/TextColor_four_opt_two"
+                                    android:fontFamily="@font/barlow_light"
+                                    android:text="Run"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <View
+                                    android:background="#ff0000"
+                                    android:layout_width="20dp"
+                                    android:layout_height="match_parent"/>
+                                <TextView
+                                    android:textColor="@color/TextColor_four_opt_two"
+                                    android:fontFamily="@font/barlow_light"
+                                    android:text="Break"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="5dp"
+                    android:padding="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="570dp"
+                    android:background="@drawable/card_shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:onClick="DateOptional"
+                        android:id="@+id/MachineDetail_Date_Card_Three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/barlow_medium"
+                        android:text="27-July"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/TextColor_four_opt_two"
+                        android:textSize="20sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/barlow_light"
+                            android:text= "Biểu đồ hiệu suất máy chạy"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/TextColor_four_opt_two"
+                            />
+                        <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+                            android:id="@+id/LazyLoaderThree"
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:lazyloader_animDur="300"
+                            app:lazyloader_dotsDist="5dp"
+                            app:lazyloader_dotsRadius="4dp"
+                            app:lazyloader_firstDelayDur="150"
+                            app:lazyloader_firstDotColor="#FFC107"
+                            app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+                            app:lazyloader_secondDelayDur="300"
+                            app:lazyloader_secondDotColor="#FFC107"
+                            app:lazyloader_thirdDotColor="#FFC107" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/MachineDetail_PipeChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/MachineDetail_ProductivityTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/barlow_medium"
+                        android:textColor="@color/TextColor_four_opt_two"/>
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/TextColor_four_opt_two"
+                        android:text="Hiệu suất của máy"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/MachineDetail_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_menu"
+        android:background="@color/CardBackGround_four_opt_one"
+        app:itemIconTint="@color/ButtonColor_four"
+        app:itemTextColor="@color/ButtonColor_four">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:padding="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn"
+    android:orientation="vertical"
+    android:background="@color/BackGround_four">
+
+    <TextView
+        android:id="@+id/SignIn_Header"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xin\nChào!"
+        android:textColor="@color/ButtonColor_four"
+        android:textSize="30sp"
+        android:fontFamily="@font/barlow_bold"/>
+
+    <TextView
+        android:id="@+id/SignIn_Desc"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập để truy cập vào hệ thống"
+        android:textColor="@color/ButtonColor_four"
+        android:textSize="15sp"
+        android:fontFamily="@font/barlow_light"
+        />
+
+    <LinearLayout
+        android:id="@+id/SignIn_Card"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/siginin_card_shape"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SignIn_UserID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/ButtonColor_four"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SignIn_UserID_Edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mã/Tên người dùng"
+                android:drawableStart="@drawable/user_icon"
+                android:drawablePadding="10dp"
+                android:textColor="@color/ButtonColor_four"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SignIn_UserPassWord"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/ButtonColor_four"
+            android:textColorHint="@color/ButtonColor_four"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SignIn_UserPassWord_Edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:hint="Mật khẩu"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/password_icon"
+                android:textColor="@color/ButtonColor_four" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <CheckBox
+                android:id="@+id/SignIn_RememberMe_Btn"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/ButtonColor_four"
+                android:text="Lưu tài khoản"
+                android:textColor="@color/ButtonColor_four" />
+
+            <TextView
+                android:visibility="invisible"
+                android:layout_marginRight="20dp"
+                android:textAlignment="textEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Quên mật khẩu?"
+                android:fontFamily="@font/barlow_light"
+                android:textColor="@color/ButtonColor_four"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/SignIn_Btn"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Đăng nhập"
+            android:textAllCaps="false"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/BackGround_four"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/barlow_bold"/>
+
+    </LinearLayout>
+
+    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        android:id="@+id/loader"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        app:lazyloader_animDur="300"
+        app:lazyloader_dotsDist="10dp"
+        app:lazyloader_dotsRadius="5dp"
+        app:lazyloader_firstDelayDur="150"
+        app:lazyloader_firstDotColor="#FFC107"
+        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+        app:lazyloader_secondDelayDur="300"
+        app:lazyloader_secondDotColor="#FFC107"
+        app:lazyloader_thirdDotColor="#FFC107" />
+
+</LinearLayout>
